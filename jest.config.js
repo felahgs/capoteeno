@@ -4,7 +4,8 @@ module.exports = {
   testEnvironment: 'jsdom',
   testPathIgnorePatterns: [
     "/node_modules/",
-    "/.next/"
+    "/.next/",
+    "/cypress/"
   ],
   moduleNameMapper: {
     "^components(.*)$": "<rootDir>/components$1",

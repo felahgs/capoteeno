@@ -11,7 +11,9 @@
     "test:cov": "jest --coverage",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "cypress:open": "cypress open",
+    "cypress:run": "cypress run"
   },
   "dependencies": {
     "@types/glob": "^7.2.0",
@@ -45,10 +47,12 @@
     "@typescript-eslint/parser": "^5.26.0",
     "babel-jest": "^28.1.0",
     "babel-loader": "^8.2.5",
+    "cypress": "^9.7.0",
     "eslint": "^8.16.0",
     "eslint-config-next": "12.1.6",
     "eslint-config-prettier": "^8.5.0",
     "eslint-import-resolver-typescript": "^2.7.1",
+    "eslint-plugin-cypress": "^2.12.1",
     "eslint-plugin-import-helpers": "^1.2.1",
     "eslint-plugin-prettier": "^4.0.0",
     "eslint-plugin-react": "^7.30.0",
