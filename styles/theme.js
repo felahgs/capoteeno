@@ -20,6 +20,7 @@ export const darkTheme = {
   lightBackground: '#F3F5F6',
   selection: '#FFA585',
   badge: '#DE3838',
+  logo: '#5D5D6D',
   titles: '#D6E1DF',
   text: '#D6E1DF',
   accent: '#8A85FF',

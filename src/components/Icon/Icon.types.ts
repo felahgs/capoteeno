@@ -1,4 +1,4 @@
 export interface IconProps {
-  name: string,
+  name: 'search' | 'shopping-bag',
   size?: number;
 }
