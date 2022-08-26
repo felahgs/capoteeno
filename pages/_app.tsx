@@ -20,8 +20,6 @@ function MyApp({ Component, pageProps }: AppProps) {
       <GlobalStyles />
       <Component {...pageProps} />
       <h1>Generated from: http://www.cufonfonts.com</h1><br/>
-      {/* <h1 style={{fontFamily:'Saira Regular', fontWeight:'normal', fontSize: '42px'}}>AaBbCcDdEeFfGgHhŞşIıİi Example</h1> */}
-      {/* <h1 style={{fontFamily:'Saira Stencil One', fontWeight:"normal", fontSize: "42px"}}>AaBbCcDdEeFfGgHhŞşIıİi Example</h1> */}
     </ThemeProvider>
   );
 
