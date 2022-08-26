@@ -25,4 +25,8 @@ const Template: ComponentStory<typeof Pagination> = (args) => (
   <Pagination {...args}/>
 );
 export const Default = Template.bind({});
-Default.args = { currentPage: 1, lastPage: 5 };
+Default.args = { 
+  currentPage: 1, 
+  lastPage: 5, 
+  onPageChange: (newPage) => console.log('setting page to ', newPage)
+};

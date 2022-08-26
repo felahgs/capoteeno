@@ -39,8 +39,14 @@ const Pagination = ({currentPage: initialPage, lastPage, onPageChange}: T.Pagina
       <>
         {new Array(pageArraySize).fill(1).map((page, index) => {
           const i = index + offset;
+          const isSelected = i === selectedPage;
           return (
-            <S.PageButton onClick={() => handlePageSelection(i)} key={`${page}-${i}`} selected={i === selectedPage}> 
+            <S.PageButton 
+              onClick={() => !isSelected && handlePageSelection(i)} 
+              aria-label={isSelected ? `current page ${i}` : `go to page ${i}`}
+              key={`${page}-${i}`} 
+              selected={isSelected}
+            > 
               {i} 
             </S.PageButton>
           );})}
@@ -51,10 +57,19 @@ const Pagination = ({currentPage: initialPage, lastPage, onPageChange}: T.Pagina
   return (
     <S.Container>
       <PagesList />
-      <S.PreviousPageButton onClick={() => handlePageSelection(selectedPage - 1)} disabled={selectedPage === 1}> 
+      <S.PreviousPageButton 
+        aria-label='previous page' 
+        onClick={() => handlePageSelection(selectedPage - 1)} 
+        disabled={selectedPage === 1}
+      > 
         <Icon name="left-arrow" size={14}/> 
       </S.PreviousPageButton>
-      <S.NextPageButton onClick={() => handlePageSelection(selectedPage + 1)} disabled={selectedPage >= lastPage}> 
+
+      <S.NextPageButton 
+        aria-label='next page' 
+        onClick={() => handlePageSelection(selectedPage + 1)} 
+        disabled={selectedPage >= lastPage}
+      > 
         <Icon name="right-arrow" size={14}/> 
       </S.NextPageButton>
     </S.Container>

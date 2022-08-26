@@ -4,10 +4,13 @@
 
 import { render } from '@testing-library/react';
 
+import { ThemeProvider } from 'styled-components';
+import { lightTheme } from 'styles/theme';
+
 // Add in any providers here if necessary:
 // (ReduxProvider, ThemeProvider, etc)
 const Providers = ({ children }) => {
-  return children;
+  return <ThemeProvider theme={lightTheme}>{children}</ThemeProvider>;
 };
 
 const customRender = (ui, options = {}) =>
